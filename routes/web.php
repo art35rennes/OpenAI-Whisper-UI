@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::post("/push_audio_file","Whisper@postFile")->name("pushAudioFile");
 Route::get('/', function () {
     return view('welcome');
 });

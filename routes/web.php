@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::post("/push_audio_file","Whisper@postFile")->name("pushAudioFile");
+Route::post("/whisper",[\App\Http\Controllers\Whisper::class, "post"])->name("whisper.post");
 Route::get('/', function () {
     return view('welcome');
 });

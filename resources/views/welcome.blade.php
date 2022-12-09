@@ -5,7 +5,7 @@
         <h1>OpenAI Whisper</h1>
         <p class="lead">Transférer le fichier audio à transcrire</p>
 
-        <form name="transcription" method="post" enctype="multipart/form-data" action="{{route("pushAudioFile")}}">
+        <form name="transcription" method="post" enctype="multipart/form-data" action="{{route("whisper.post")}}">
             @csrf
             <div class="row gx-2">
                 <div class="col-md-3 col-sm-12 border rounded-5 py-2 px-4 my-1 mx-1">
@@ -23,7 +23,7 @@
                         </div>
                     </div>
                     <hr>
-                    <select class="select">
+                    <select class="select" name="model">
                         <option value="tiny">Tiny</option>
                         <option value="base">Base</option>
                         <option value="small" selected>Small</option>
